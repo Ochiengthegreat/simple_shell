@@ -29,4 +29,5 @@ void task1(char *av[])
 	{
 		wait(&status);
 	}
+	free(buffer);
 }
