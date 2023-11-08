@@ -36,6 +36,7 @@ int main(void)
 		{
 			wait(&status);
 		}
+
 		i = 0;
 		free(argv);
 	}
