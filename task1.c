@@ -13,8 +13,7 @@ void task1(char *av[])
 	char *buffer;
 	int status;
 
-
-	buffer = malloc(sizeof(char) * 10);
+	buffer = malloc(sizeof(char) * 10)
 	write(stdin, "#cisfun ", 9);
 	ret_getline = getline(&buffer, &n, stdin);
 	pid = fork();
