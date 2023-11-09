@@ -1,43 +1,46 @@
 #include "shell.h"
 /**
- * main - Entry point of simple shell
- *
- * Return: Always 0 on success
- */
+* main - test case
+*
+* Return: Always 0(success)
+*/
 int main(void)
 {
 	pid_t child_pid;
 	size_t buf_size = 0;
 	char *buffer = NULL;
-	char *token;
-	int status, i = 0;
-	char **argv;
+	int wc = 0;
+	char *arry;
+	char **argv = NULL;
+	int status = 0;
 
 	while (1)
 	{
 		write(STDOUT_FILENO, "#cisfun$ ", 9);
 		getline(&buffer, &buf_size, stdin);
-		token = strtok(buffer, "\t\n");
-		argv = malloc(sizeof(char *) * 1024);
-		while (token)
+		wc = word_count(buffer);
+		argv = malloc(sizeof(char *) * (wc + 1));
+		if (argv == NULL)
 		{
-			argv[i] = token;
-			token = strtok(NULL, "\t\n");
-			i++;
+			perror("Memory Allocation");
+			exit(1);
 		}
-		argv[i] = NULL;
+		arry = str_to_arr(buffer);
+		free(buffer);
+		tokenizer(arry, argv);
 		child_pid = fork();
 		if (child_pid == 0)
 		{
 			if (execve(argv[0], argv, NULL) == -1)
+			{
 				perror("Error");
+				exit(1);
+			}
 		}
 		else
 		{
 			wait(&status);
 		}
-
-		i = 0;
 		free(argv);
 	}
 }

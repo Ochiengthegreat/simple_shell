@@ -8,6 +8,17 @@
 #include <sys/wait.h>
 #include <string.h>
 
-/* shell functions for task 1 */
-void task1(char *av[]);
-#endif _SHELL_H_
+/* shell functions */
+void display_av(char *av[]);
+
+void koch_print(const char *specialstring);
+
+int word_count(char *str);
+
+char *str_to_arr(char *str);
+
+void tokenizer(char *str, char **dest);
+
+void store_token(char *token, char **dest, int index);
+
+#endif /* _SHELL_H_ */
