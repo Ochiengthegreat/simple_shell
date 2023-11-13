@@ -14,7 +14,7 @@ char *str_to_arr(char *str)
 	int i;
 
 	length = strlen(str);
-	arr = calloc((length + 1), sizeof(char));
+	arr = malloc((length + 1) * sizeof(char));
 	if (arr == NULL)
 	{
 		perror("Memory allocation");
