@@ -13,9 +13,12 @@ int main(void)
 	char *arry;
 	char **argv = NULL;
 	int status = 0;
+	int counter = 0;
 
 	while (1)
 	{
+		if (counter > 1)
+			free(argv);
 		write(STDOUT_FILENO, "#cisfun$ ", 9);
 		getline(&buffer, &buf_size, stdin);
 		wc = word_count(buffer);
@@ -26,7 +29,6 @@ int main(void)
 			exit(1);
 		}
 		arry = str_to_arr(buffer);
-		free(buffer);
 		tokenizer(arry, argv);
 		child_pid = fork();
 		if (child_pid == 0)
@@ -41,6 +43,5 @@ int main(void)
 		{
 			wait(&status);
 		}
-		free(argv);
 	}
 }
