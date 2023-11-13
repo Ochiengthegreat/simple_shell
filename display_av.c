@@ -6,11 +6,11 @@
  */
 void display_av(char *av[])
 {
-        int i = 0;
+	int i = 0;
 
-        while (av[i] != NULL)
-        {
-                printf("%s\n", av[i]);
-                i++;
-        }
+	while (av[i] != NULL)
+	{
+		printf("%s\n", av[i]);
+		i++;
+	}
 }
