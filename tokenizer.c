@@ -1,10 +1,10 @@
 #include "shell.h"
 /**
-* tokenizer - demostrating tokenization
-* @str: string to tokenize
-* @dest: **argv
-*
-*/
+ * tokenizer - demostrating tokenization
+ * @str: string to tokenize
+ * @dest: **argv
+ *
+ */
 void tokenizer(char *str, char **dest)
 {
 	char *token;

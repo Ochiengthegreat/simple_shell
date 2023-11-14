@@ -21,4 +21,6 @@ void tokenizer(char *str, char **dest);
 
 void store_token(char *token, char **dest, int index);
 
+void shell_exit(char *buffer);
+
 #endif /* _SHELL_H_ */
