@@ -23,4 +23,6 @@ void store_token(char *token, char **dest, int index);
 
 void shell_exit(char *buffer);
 
+char *get_path(char *command);
+
 #endif /* _SHELL_H_ */
