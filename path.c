@@ -1,4 +1,4 @@
-#include "main.h"
+#include "shell.h"
 /**
  * get_path - function that takes in the cmd passed and returns
  * the path
@@ -39,7 +39,7 @@ char *get_path(char *command)
 			else
 			{
 				free(file_path);
-				path_token = strtok(NULL, ":");
+				ochieng_token = strtok(NULL, ":");
 			}
 		}
 		free(path_dup);
