@@ -25,6 +25,6 @@ char *str_to_arr(char *str)
 		arr[i] = str[i];
 	}
 	arr[i] = '\0';
-	shell_exit(arr);
+	/* shell_exit(arr); */
 	return (arr);
 }
