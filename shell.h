@@ -26,6 +26,8 @@ void shell_exit(char *buffer);
 
 char *get_path(char *command);
 
+void _free(char **argv, int wc);
+
 /* string functions */
 char *_strcpy(char *dest, char *src);
 
