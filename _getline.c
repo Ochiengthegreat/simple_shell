@@ -7,7 +7,7 @@ char *_getline(void)
 {
 	size_t buf_size = 1024;
 	char *buff = malloc(buf_size);
-    ssize_t rd;
+	ssize_t rd;
 	int i;
 
 	if (buff == NULL)
@@ -15,7 +15,6 @@ char *_getline(void)
 		perror("malloc");
 		exit(EXIT_FAILURE);
 	}
-
 	for (i = 0;; i++)
 	{
 		rd = read(STDIN_FILENO, &buff[i], 1);
@@ -30,7 +29,6 @@ char *_getline(void)
 			buff[i] = '\0';
 			break;
 		}
-
 		if (i >= (int)buf_size - 1)
 		{
 			char *new_buff = _realloc_(buff, buf_size, buf_size + 1024);
@@ -45,15 +43,13 @@ char *_getline(void)
 			buf_size += 1024;
 		}
 	}
-
 	handle_hash(buff);
 	return (buff);
 }
-
 /**
 * handle_hash - Remove everything after #
 * @buff: Input string
-* 
+*
 */
 void handle_hash(char *buff)
 {
