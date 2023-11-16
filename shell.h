@@ -26,4 +26,15 @@ void shell_exit(char *buffer);
 
 char *get_path(char *command);
 
+/* Advanced functions */
+void handle_hash(char *buff);
+
+char *_getline(void);
+
+void *_realloc_(void *ptr, unsigned int old_size, unsigned int new_size);
+
+char *_memcpy(char *dest, char *src, unsigned int n);
+
+void *fill_array(void *ptr, int lx, unsigned int len);
+
 #endif /* _SHELL_H_ */
