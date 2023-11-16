@@ -26,6 +26,11 @@ void shell_exit(char *buffer);
 
 char *get_path(char *command);
 
+/* string functions */
+char *_strcpy(char *dest, char *src);
+
+int _strlen(char *s);
+
 /* Advanced functions */
 void handle_hash(char *buff);
 

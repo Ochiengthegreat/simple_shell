@@ -15,14 +15,14 @@ int word_count(char *str)
 
 	int len = 0;
 
-	len = strlen(str);
+	len = _strlen(str);
 	holder = malloc(sizeof(char) * (len + 1));
 	if (holder == NULL)
 	{
 		perror("Memory allocation");
 		exit(1);
 	}
-	strcpy(holder, str);
+	_strcpy(holder, str);
 	token = strtok(holder, " ");
 	while (token != NULL)
 	{

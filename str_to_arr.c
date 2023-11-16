@@ -13,7 +13,7 @@ char *str_to_arr(char *str)
 
 	int i;
 
-	length = strlen(str);
+	length = _strlen(str);
 	arr = malloc((length + 1) * sizeof(char));
 	if (arr == NULL)
 	{
