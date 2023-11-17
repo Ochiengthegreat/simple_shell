@@ -33,7 +33,7 @@ int main(void)
                 perror("Error");
         }
         else
-        
+
         {
             wait(&status);
         }
