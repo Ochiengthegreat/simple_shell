@@ -23,7 +23,7 @@
 #define CMD_AND 2
 #define CMD_CHAIN 3
 
-/* This is for convert_number() - defined constants */
+/* This is for convert_number() - constants defined */
 #define CONVERT_LOWERCASE 1
 #define CONVERT_UNSIGNED 2
 
